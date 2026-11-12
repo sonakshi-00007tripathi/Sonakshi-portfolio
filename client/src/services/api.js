@@ -5,7 +5,7 @@
  * Every caller must handle failure: the site works fully without the API.
  */
 const BASE = (import.meta.env.VITE_API_URL || '').replace(/\/$/, '');
-const TIMEOUT_MS = 8000;
+const TIMEOUT_MS = 60000;
 
 async function request(path, { method = 'GET', body } = {}) {
   const controller = new AbortController();
